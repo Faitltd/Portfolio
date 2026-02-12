@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Hometown Tire Pros | Tire Sales & Service</title>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    .animate-on-scroll-hidden {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .animate-on-scroll-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
+    .animate-marquee {
+      animation: marquee 30s linear infinite;
+    }
+  </style>
+<link rel="stylesheet" href="styles.css"></head>
+
+<body id="app-root" class="font-secondary bg-neutral-background text-text-primary overflow-x-hidden antialiased">
+
+  <nav class="absolute top-0 left-0 w-full z-50 text-white py-6 px-4 md:px-12 bg-black/20 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="/index.html" class="text-xl md:text-2xl font-bold tracking-tight font-primary uppercase">
+        Hometown <span class="text-brand-accent">Tire Pros</span>
+      </a>
+
+      <div class="hidden md:flex space-x-8 text-sm font-medium">
+        <a href="services.html" class="hover:text-brand-accent transition">Services</a>
+        <a href="about.html" class="hover:text-brand-accent transition">About Us</a>
+        <a href="tires.html" class="text-brand-accent transition">Tires</a>
+        <a href="location.html" class="hover:text-brand-accent transition">Location</a>
+      </div>
+
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="tel:7203280490" class="text-sm font-bold hover:text-brand-accent transition flex items-center">
+          <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+          (720) 328-0490
+        </a>
+      </div>
+
+      <button id="mobile-menu-toggle" class="md:hidden text-white p-1">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-brand-dark p-6 backdrop-blur-lg shadow-2xl">
+      <div class="flex flex-col space-y-4 text-center">
+        <a href="services.html" class="text-lg font-medium hover:text-brand-accent">Services</a>
+        <a href="about.html" class="text-lg font-medium hover:text-brand-accent">About Us</a>
+        <a href="tires.html" class="text-lg font-bold text-brand-accent">Tires</a>
+        <a href="location.html" class="text-lg font-medium hover:text-brand-accent">Location</a>
+        <a href="tel:7203280490" class="text-lg font-bold text-brand-accent pt-2">(720) 328-0490</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="relative w-full h-auto bg-brand-dark overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="https://www.hometowntirepros.com/portals/94/Skins/master/img/auto-repair/01.jpg" alt="Tire Services" class="w-full h-full object-cover opacity-45">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-brand-dark/90"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-12 pt-28 md:pt-40 pb-20">
+        <div class="max-w-3xl" data-animation-on-scroll="">
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-4">Tire Center</p>
+          <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight font-primary uppercase tracking-tight mb-6">
+            Tire Sales, Service,<br>and Installation
+          </h1>
+          <p class="text-gray-300 text-lg leading-relaxed max-w-xl">
+            Shop top brands, get expert fitment recommendations, and keep your ride safe with balancing, rotation, and alignment-ready service.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <p class="text-center text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-12">Authorized Dealer For Leading Brands</p>
+        <div class="w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+          <div class="flex items-center whitespace-nowrap animate-marquee">
+            <span class="text-4xl font-black text-gray-200 uppercase mx-12">Michelin®</span>
+            <span class="text-4xl font-black text-gray-200 uppercase mx-12">BFGoodrich®</span>
+            <span class="text-4xl font-black text-gray-200 uppercase mx-12">Uniroyal®</span>
+            <span class="text-4xl font-black text-gray-200 uppercase mx-12">Continental</span>
+            <span class="text-4xl font-black text-gray-200 uppercase mx-12">General Tire</span>
+            <span class="text-4xl font-black text-gray-200 uppercase mx-12">Michelin®</span>
+            <span class="text-4xl font-black text-gray-200 uppercase mx-12">BFGoodrich®</span>
+            <span class="text-4xl font-black text-gray-200 uppercase mx-12">Uniroyal®</span>
+            <span class="text-4xl font-black text-gray-200 uppercase mx-12">Continental</span>
+            <span class="text-4xl font-black text-gray-200 uppercase mx-12">General Tire</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-neutral-surface">
+      <div class="max-w-7xl mx-auto px-4 md:px-12">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-10 border border-gray-100 rounded-none shadow-sm" data-animation-on-scroll="">
+            <div class="w-12 h-12 mb-6 bg-gray-100 flex items-center justify-center text-gray-900 rounded-none"><i data-lucide="circle-dot" class="w-6 h-6"></i></div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase font-primary">Tire Installation</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Professional mounting and balancing for passenger, performance, and light truck tires.</p>
+          </div>
+          <div class="bg-white p-10 border border-gray-100 rounded-none shadow-sm" data-animation-on-scroll="">
+            <div class="w-12 h-12 mb-6 bg-gray-100 flex items-center justify-center text-gray-900 rounded-none"><i data-lucide="refresh-cw" class="w-6 h-6"></i></div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase font-primary">Rotation and Balance</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Extend tread life, reduce vibration, and keep handling smooth with regular service intervals.</p>
+          </div>
+          <div class="bg-white p-10 border border-gray-100 rounded-none shadow-sm" data-animation-on-scroll="">
+            <div class="w-12 h-12 mb-6 bg-gray-100 flex items-center justify-center text-gray-900 rounded-none"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase font-primary">Flat Repair and Safety Check</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Fast flat repairs, tread checks, and pressure verification to keep your vehicle road-ready.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 px-4 bg-white">
+      <div class="relative bg-brand-dark rounded-none overflow-hidden py-16 px-8 md:px-20 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8" data-animation-on-scroll="">
+        <div class="space-y-4 max-w-2xl text-center md:text-left">
+          <h2 class="text-3xl md:text-5xl font-bold text-white font-primary">Need New Tires?<br><span class="text-brand-accent">Let's Find the Right Set.</span></h2>
+          <p class="text-gray-400">Call us for current inventory and fitment recommendations.</p>
+        </div>
+        <a href="tel:7203280490" class="bg-brand-accent text-brand-dark px-10 py-5 rounded-none font-bold text-sm hover:bg-white transition uppercase tracking-widest shadow-xl">Call Tire Desk</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-brand-dark text-white pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-4 md:px-12">
+      <div class="grid md:grid-cols-4 gap-12 mb-16">
+        <div class="space-y-4">
+          <div class="text-2xl font-bold font-primary">Hometown Tire Pros.</div>
+          <p class="text-gray-400 text-sm leading-relaxed">Top auto repair and service shop in Centennial, CO. Experience and commitment you can trust.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-white uppercase text-sm tracking-widest">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="services.html" class="hover:text-white transition-colors">Auto Repair</a></li>
+            <li><a href="tires.html" class="hover:text-white transition-colors">Shop Tires</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">Our Story</a></li>
+            <li><a href="location.html" class="hover:text-white transition-colors">Find Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-white uppercase text-sm tracking-widest">Contact Information</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 text-brand-accent shrink-0"></i><span>13900 E Briarwood Ave<br>Centennial, CO 80112</span></li>
+            <li class="flex items-center"><i data-lucide="phone" class="w-4 h-4 mr-2 text-brand-accent"></i><span>(720) 328-0490</span></li>
+            <li class="flex items-center"><i data-lucide="mail" class="w-4 h-4 mr-2 text-brand-accent"></i><span>service@hometowntirepros.com</span></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-white uppercase text-sm tracking-widest">Back to Portfolio</h4>
+          <a href="/index.html" class="inline-flex bg-white text-black px-4 py-2 rounded-none text-sm font-bold hover:bg-gray-100 transition">View Portfolio</a>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+        <p>© 2026 Hometown Tire Pros &amp; Service Center. All rights reserved.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="https://www.facebook.com/HometownTP/" class="hover:text-white transition-colors">Facebook</a>
+          <a href="https://www.instagram.com/hometowntires/" class="hover:text-white transition-colors">Instagram</a>
+          <a href="https://g.co/kgs/GkCV69Z" class="hover:text-white transition-colors">Google</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-on-scroll-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.05 });
+
+      document.querySelectorAll('[data-animation-on-scroll]').forEach(el => {
+        el.classList.add('animate-on-scroll-hidden');
+        observer.observe(el);
+      });
+
+      const menuToggle = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      let isMenuOpen = false;
+
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+          isMenuOpen = !isMenuOpen;
+          if (isMenuOpen) {
+            mobileMenu.classList.remove('hidden');
+            menuToggle.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
+          } else {
+            mobileMenu.classList.add('hidden');
+            menuToggle.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+          }
+          lucide.createIcons();
+        });
+      }
+    });
+  </script>
+
+</body></html>
