@@ -1,0 +1,54 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SERVER_IP: 89.167.74.56
+      SSH_USER: root
+      REMOTE_DIR: /var/www/portfolio
+      DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+      DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate required secret
+        run: |
+          if [ -z "${DEPLOY_SSH_KEY}" ]; then
+            echo "::error::Missing required repository secret: DEPLOY_SSH_KEY"
+            exit 1
+          fi
+
+      - name: Configure SSH
+        run: |
+          PORT="${DEPLOY_PORT:-22}"
+          install -m 700 -d ~/.ssh
+          printf "%s" "${DEPLOY_SSH_KEY}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p "${PORT}" -H "${SERVER_IP}" >> ~/.ssh/known_hosts
+
+      - name: Sync files to server
+        run: |
+          PORT="${DEPLOY_PORT:-22}"
+          rsync -av --delete \
+            --exclude ".DS_Store" \
+            --exclude ".git" \
+            -e "ssh -i ~/.ssh/id_ed25519 -p ${PORT}" \
+            ./ "${SSH_USER}@${SERVER_IP}:${REMOTE_DIR}/"
+
+      - name: Set web permissions
+        run: |
+          PORT="${DEPLOY_PORT:-22}"
+          ssh -i ~/.ssh/id_ed25519 -p "${PORT}" "${SSH_USER}@${SERVER_IP}" \
+            "chown -R www-data:www-data ${REMOTE_DIR} && find ${REMOTE_DIR} -type d -exec chmod 755 {} \\; && find ${REMOTE_DIR} -type f -exec chmod 644 {} \\;"

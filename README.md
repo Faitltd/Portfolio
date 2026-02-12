@@ -58,6 +58,41 @@ You can upload these files to any web hosting service:
 - **GitHub Pages** (free): Push to a GitHub repo and enable Pages
 - **Any web host**: Upload via FTP to your hosting provider
 
+## Auto Deploy on Git Push (GitHub Actions)
+
+This repo is configured to auto-deploy to `https://portfolio.itsfait.com/` whenever you push to the `main` branch.
+
+### One-time setup
+
+1. Generate a deploy key on your local machine:
+
+```bash
+ssh-keygen -t ed25519 -f ~/.ssh/portfolio_deploy -C "github-actions-portfolio"
+```
+
+2. Add the public key to the server:
+
+```bash
+cat ~/.ssh/portfolio_deploy.pub | ssh root@89.167.74.56 'umask 077; mkdir -p ~/.ssh; cat >> ~/.ssh/authorized_keys'
+```
+
+3. Add this repository secret in GitHub:
+
+- Name: `DEPLOY_SSH_KEY`
+- Value: contents of `~/.ssh/portfolio_deploy` (private key)
+
+Optional: add `DEPLOY_PORT` if your SSH port is not `22`.
+
+### Deploy flow
+
+- Push to `main`:
+
+```bash
+git push origin main
+```
+
+- GitHub Actions runs `.github/workflows/deploy.yml` and publishes to `/var/www/portfolio`.
+
 ## ❓ Need Help?
 
 Visit [landinghero.com](https://landinghero.com) for support.
