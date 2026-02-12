@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Yuan Palace | The Concept</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    .animate-on-scroll-hidden {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .animate-on-scroll-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+<link rel="stylesheet" href="styles.css"></head>
+
+<body id="app-root" class="font-secondary bg-neutral-background text-text-secondary overflow-x-hidden selection:bg-brand-primary selection:text-white">
+
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-gray-100">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a class="flex items-center gap-3 group" href="index.html">
+        <img src="https://ik.imagekit.io/awwybhhmo/assets/favicons/Chinese/012-god-of-wealth.svg?tr=" alt="Yuan Palace Logo" class="w-10 h-10">
+        <div class="flex flex-col">
+            <span class="font-primary text-xl font-bold text-text-primary tracking-tight leading-none">YUAN PALACE</span>
+            <span class="text-[10px] tracking-[0.3em] text-brand-primary font-semibold uppercase">Mongolian BBQ</span>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-xs font-semibold tracking-widest text-text-primary uppercase">
+        <a class="text-brand-accent transition-colors" href="concept.html" aria-current="page">The Concept</a>
+        <a class="hover:text-brand-accent transition-colors" href="menu.html">Menu</a>
+        <a class="hover:text-brand-accent transition-colors" href="location.html">Visit</a>
+      </div>
+
+      <a href="https://www.yuanpalacemongolianbbq.com/1xtekj85/yuan-palace-mongolian-bbq-centennial-80112/order-online" class="bg-brand-accent text-white px-6 py-3 font-semibold text-xs tracking-widest uppercase hover:bg-red-700 transition-colors shadow-lg">
+        Order Online
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="min-h-[70vh] py-20 relative flex items-center">
+      <div class="absolute inset-0 bg-black/50 z-10"></div>
+      <img src="https://www.yuanpalacemongolianbbq.com/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fawwybhhmo%2Fsatellite_images%2Fchinese%2Fred%2Fabout_us%2F3.jpg%3Ftr%3D&w=3840&q=75" alt="Yuan Palace interior" class="absolute inset-0 w-full h-full object-cover">
+
+      <div class="max-w-7xl mx-auto px-6 relative z-20 w-full pt-12" data-animation-on-scroll="">
+        <span class="text-white text-xs font-bold tracking-[0.4em] uppercase mb-4 block">Our Story</span>
+        <h1 class="font-primary text-5xl md:text-7xl text-white font-bold leading-tight mb-6 max-w-3xl">
+          Family-Owned, Fire-Grilled, and Built Around Freshness.
+        </h1>
+        <p class="text-white/90 text-base md:text-lg font-light leading-relaxed max-w-2xl">
+          Yuan Palace combines the energy of live grilling with the precision of quality ingredients. Every bowl is made-to-order and cooked in front of you for flavor you can see and taste.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-24 bg-neutral-surface overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div class="relative" data-animation-on-scroll="">
+            <div class="absolute -top-10 -left-10 w-40 h-40 bg-brand-primary/5 rounded-full z-0"></div>
+            <img src="https://www.yuanpalacemongolianbbq.com/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fawwybhhmo%2Fsatellite_images%2Fchinese%2Fred%2Fabout_us%2F3.jpg%3Ftr%3D&w=3840&q=75" alt="Fresh ingredients" class="relative z-10 w-full rounded-sm shadow-2xl">
+            <div class="absolute -bottom-6 -right-6 p-8 bg-white shadow-xl z-20 hidden md:block border-l-4 border-brand-primary">
+              <p class="font-primary text-3xl font-bold text-text-primary italic">"Simply Fresh"</p>
+            </div>
+          </div>
+
+          <div data-animation-on-scroll="">
+            <span class="text-brand-primary text-xs font-bold tracking-[0.2em] uppercase mb-4 block">The Yuan Palace Way</span>
+            <h2 class="font-primary text-4xl md:text-5xl text-text-primary mb-8 leading-tight">Hand-Crafted Meals, Family-Owned Heart</h2>
+            <div class="space-y-6 text-text-secondary leading-relaxed">
+              <p>Located in the Arapahoe Park shopping center, Yuan Palace is dedicated to serving neighborhoods like Dry Creek and The Meadows with high-quality Asian cuisine and warm hospitality.</p>
+              <p>Our interactive grilling experience puts you in control. Choose your proteins, vegetables, noodles, and sauces, and watch your custom bowl come together on the grill.</p>
+              <p>Whether you prefer bold spice, savory umami, or lighter flavor profiles, our menu is designed to help you craft your perfect combination every visit.</p>
+            </div>
+            <div class="mt-12 flex gap-8 border-t border-gray-200 pt-12">
+              <div>
+                <p class="text-3xl font-primary font-bold text-text-primary">100%</p>
+                <p class="text-[10px] uppercase font-bold tracking-widest">Fresh Ingredients</p>
+              </div>
+              <div>
+                <p class="text-3xl font-primary font-bold text-text-primary">24h</p>
+                <p class="text-[10px] uppercase font-bold tracking-widest">Marinade Time</p>
+              </div>
+              <div>
+                <p class="text-3xl font-primary font-bold text-text-primary">2021</p>
+                <p class="text-[10px] uppercase font-bold tracking-widest">Serving Centennial</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white">
+      <div class="max-w-4xl mx-auto px-6 text-center" data-animation-on-scroll="">
+        <h2 class="font-primary text-5xl text-text-primary mb-6">From Ingredient to Grill in Minutes</h2>
+        <p class="text-text-secondary max-w-3xl mx-auto leading-relaxed mb-8">
+          Our process keeps quality front and center: fresh prep, careful marination, live grill execution, and fast service for dine-in, pickup, or online orders.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="menu.html" class="bg-brand-primary text-white px-10 py-5 font-bold text-xs tracking-widest uppercase hover:bg-brand-secondary transition-all shadow-xl">Explore Menu</a>
+          <a href="location.html" class="border border-gray-200 text-text-primary px-10 py-5 font-bold text-xs tracking-widest uppercase hover:bg-black hover:text-white transition-all">Plan Your Visit</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-950 text-gray-400 py-20">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-gray-800 pb-16">
+       <div>
+         <h4 class="font-primary text-white text-2xl mb-6 italic">Yuan Palace</h4>
+         <p class="text-sm leading-relaxed max-w-xs">Family-owned and operated, bringing the art of custom Mongolian grilling to the heart of Centennial since 2021.</p>
+       </div>
+       <div>
+         <h5 class="text-white text-xs font-bold tracking-[0.2em] uppercase mb-6">Location</h5>
+         <p class="text-sm">7555 E Arapahoe Rd Ste.G<br>Centennial, CO 80112</p>
+         <p class="mt-4 text-brand-primary font-semibold">(303) 771-6296</p>
+       </div>
+       <div>
+         <h5 class="text-white text-xs font-bold tracking-[0.2em] uppercase mb-6">Experience</h5>
+         <ul class="text-sm space-y-3">
+           <li><a href="https://www.yuanpalacemongolianbbq.com/1xtekj85/yuan-palace-mongolian-bbq-centennial-80112/order-online" class="hover:text-white transition-colors">Order Takeout</a></li>
+           <li><a href="menu.html" class="hover:text-white transition-colors">Menu</a></li>
+           <li><a href="location.html" class="hover:text-white transition-colors">Catering & Visits</a></li>
+         </ul>
+       </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest font-medium">
+       <p>© 2026 Yuan Palace Mongolian BBQ. All rights reserved.</p>
+       <div class="flex gap-6">
+         <a href="index.html" class="hover:text-white">Home</a>
+         <a href="menu.html" class="hover:text-white">Menu</a>
+         <a href="/index.html" class="hover:text-white">Portfolio</a>
+       </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-on-scroll-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('[data-animation-on-scroll]').forEach(el => {
+        el.classList.add('animate-on-scroll-hidden');
+        observer.observe(el);
+      });
+    });
+  </script>
+
+</body></html>
