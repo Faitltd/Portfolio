@@ -18,14 +18,15 @@ jobs:
       SSH_USER: root
       REMOTE_DIR: /var/www/portfolio
       DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+      DEPLOY_SSH_KEY_B64: ${{ secrets.DEPLOY_SSH_KEY_B64 }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Validate required secret
         run: |
-          if [ -z "${{ secrets.DEPLOY_SSH_KEY }}" ]; then
-            echo "::error::Missing required repository secret: DEPLOY_SSH_KEY"
+          if [ -z "${DEPLOY_SSH_KEY_B64}" ]; then
+            echo "::error::Missing required repository secret: DEPLOY_SSH_KEY_B64"
             exit 1
           fi
 
@@ -33,9 +34,7 @@ jobs:
         run: |
           PORT="${DEPLOY_PORT:-22}"
           install -m 700 -d ~/.ssh
-          cat > ~/.ssh/id_ed25519 << 'EOF'
-${{ secrets.DEPLOY_SSH_KEY }}
-EOF
+          printf "%s" "${DEPLOY_SSH_KEY_B64}" | base64 --decode > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -p "${PORT}" -H "${SERVER_IP}" >> ~/.ssh/known_hosts
 

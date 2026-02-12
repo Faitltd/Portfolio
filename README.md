@@ -78,8 +78,12 @@ cat ~/.ssh/portfolio_deploy.pub | ssh root@89.167.74.56 'umask 077; mkdir -p ~/.
 
 3. Add this repository secret in GitHub:
 
-- Name: `DEPLOY_SSH_KEY`
-- Value: contents of `~/.ssh/portfolio_deploy` (private key)
+- Name: `DEPLOY_SSH_KEY_B64`
+- Value: base64-encoded private key, generated with:
+
+```bash
+base64 < ~/.ssh/portfolio_deploy | tr -d '\n'
+```
 
 Optional: add `DEPLOY_PORT` if your SSH port is not `22`.
 
