@@ -1,0 +1,540 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Hometown Tire Pros &amp; Service Center - Centennial, CO</title>
+
+  
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&amp;family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    .animate-on-scroll-hidden {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .animate-on-scroll-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .mobile-menu-enter {
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+    .mobile-menu-enter-active {
+        transform: translateY(0);
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
+    .animate-marquee {
+      animation: marquee 30s linear infinite;
+    }
+  </style>
+<link rel="stylesheet" href="styles.css"></head>
+
+<body class="font-secondary bg-neutral-background text-text-primary overflow-x-hidden antialiased">
+
+  <!-- Navbar -->
+  <nav class="absolute top-0 left-0 w-full z-50 text-white py-6 px-4 md:px-12 bg-black/20 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <!-- Logo -->
+      <a href="/index.html" data-editable="text" data-path="header.logo" class="text-xl md:text-2xl font-bold tracking-tight font-primary uppercase">
+        Hometown <span class="text-brand-accent">Tire Pros</span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8 text-sm font-medium" data-editable-list="header.nav">
+        <a href="#services" class="hover:text-brand-accent transition" data-path="header.nav[0]">Services</a>
+        <a href="#about" class="hover:text-brand-accent transition" data-path="header.nav[1]">About Us</a>
+        <a href="#tires" class="hover:text-brand-accent transition" data-path="header.nav[2]">Tires</a>
+        <a href="#location" class="hover:text-brand-accent transition" data-path="header.nav[3]">Location</a>
+      </div>
+
+      <!-- Buttons -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="tel:7203280490" class="text-sm font-bold hover:text-brand-accent transition flex items-center">
+          <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+          (720) 328-0490
+        </a>
+        <button class="bg-brand-primary text-white border border-white px-5 py-2.5 rounded-none text-sm font-medium hover:bg-white hover:text-black transition uppercase">
+          Book Service
+        </button>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button id="mobile-menu-toggle" class="md:hidden text-white p-1">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Container -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-brand-dark p-6 backdrop-blur-lg animate-fade-in shadow-2xl">
+        <div class="flex flex-col space-y-4 text-center">
+            <a href="#services" class="text-lg font-medium hover:text-brand-accent">Services</a>
+            <a href="#about" class="text-lg font-medium hover:text-brand-accent">About Us</a>
+            <a href="#tires" class="text-lg font-medium hover:text-brand-accent">Tires</a>
+            <a href="#location" class="text-lg font-medium hover:text-brand-accent">Location</a>
+            <div class="pt-4 flex flex-col space-y-3">
+              <a href="tel:7203280490" class="text-lg font-bold text-brand-accent">(720) 328-0490</a>
+              <button class="bg-white text-black px-5 py-3 rounded-none font-medium uppercase tracking-wider text-sm">Schedule Now</button>
+            </div>
+        </div>
+    </div>
+  </nav>
+
+  <main><section class="relative w-full h-auto bg-brand-dark overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="https://www.hometowntirepros.com/portals/94/Skins/master/img/auto-repair/01.jpg" alt="Hometown Tire Pros Centennial Shop" class="w-full h-full object-cover opacity-50">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-brand-dark/90"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-12 pt-24 md:pt-36 pb-16 md:pb-24">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-8" data-animation-on-scroll="">
+        <div class="inline-block px-4 py-1.5 bg-brand-accent/20 backdrop-blur-md rounded-none border border-brand-accent/30 text-xs font-bold text-brand-accent uppercase tracking-widest">
+          Top Rated Auto Repair in Centennial
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight font-primary uppercase tracking-tight">
+          Reliable Service <br>
+          <span class="text-brand-accent">Hometown</span> <br>
+          Quality.
+        </h1>
+        <p class="text-gray-300 text-lg max-w-md leading-relaxed">
+          From full engine diagnostics to quick oil changes, we keep your family safe on the road with expert care and honest pricing.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <button class="bg-white text-black px-8 py-4 rounded-none font-bold text-sm hover:bg-brand-accent transition uppercase tracking-wider">
+            Schedule Appointment
+          </button>
+          <a href="tel:7203280490" class="flex items-center px-8 py-4 bg-transparent border border-white text-white rounded-none font-bold text-sm hover:bg-white/10 transition uppercase tracking-wider">
+            Call Us Now
+          </a>
+        </div>
+      </div>
+
+      <div data-animation-on-scroll="" class="hidden md:block">
+        <div class="bg-white/10 backdrop-blur-md p-8 rounded-none border border-white/10 shadow-2xl relative overflow-hidden group">
+          <div class="relative z-10">
+            <h3 class="text-2xl font-bold text-white mb-4 uppercase font-primary">Our Promise</h3>
+            <p class="text-gray-300 mb-6">"We turned a passion for a better tire buying experience into a full-service provider that Centennial families trust every single day."</p>
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-brand-accent rounded-none flex items-center justify-center text-brand-dark">
+                <i data-lucide="award" class="w-6 h-6"></i>
+              </div>
+              <div class="text-white">
+                <div class="font-bold text-sm uppercase">Certified Technicians</div>
+                <div class="text-xs text-gray-400">Qualified for every job</div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-brand-accent/10 rounded-full blur-3xl"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Brand Scroller (Tires) -->
+<section id="tires" class="py-16 bg-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <p class="text-center text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-12">Authorized Dealer For Leading Brands</p>
+    <div class="w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+      <div class="flex items-center whitespace-nowrap animate-marquee">
+        <!-- Tire Brands -->
+        <span class="text-4xl font-black text-gray-200 uppercase mx-12">Michelin®</span>
+        <span class="text-4xl font-black text-gray-200 uppercase mx-12">BFGoodrich®</span>
+        <span class="text-4xl font-black text-gray-200 uppercase mx-12">Uniroyal®</span>
+        <span class="text-4xl font-black text-gray-200 uppercase mx-12">Continental</span>
+        <span class="text-4xl font-black text-gray-200 uppercase mx-12">General Tire</span>
+        <span class="text-4xl font-black text-gray-200 uppercase mx-12">Michelin®</span>
+        <span class="text-4xl font-black text-gray-200 uppercase mx-12">BFGoodrich®</span>
+        <span class="text-4xl font-black text-gray-200 uppercase mx-12">Uniroyal®</span>
+        <span class="text-4xl font-black text-gray-200 uppercase mx-12">Continental</span>
+        <span class="text-4xl font-black text-gray-200 uppercase mx-12">General Tire</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Grid -->
+<section id="services" class="py-24 bg-neutral-surface">
+  <div class="max-w-7xl mx-auto px-4 md:px-12">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6" data-animation-on-scroll="">
+      <div class="max-w-2xl">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 font-primary uppercase tracking-tight">Full-Service <br> <span class="text-gray-500">Auto Repair</span></h2>
+      </div>
+      <p class="text-gray-600 max-w-sm">We employ experienced, qualified technicians for every repair or maintenance job to ensure unbeatable quality.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-gray-200">
+      
+      <!-- Service 1 -->
+      <div class="p-10 bg-white border-r border-b border-gray-200 hover:bg-gray-50 transition group" data-animation-on-scroll="">
+        <div class="w-12 h-12 mb-8 bg-gray-100 flex items-center justify-center text-gray-900 transition-colors group-hover:bg-brand-dark group-hover:text-white rounded-none">
+          <i data-lucide="thermometer-snowflake" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4 uppercase font-primary">A/C Repair</h3>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">Expert diagnostic and repair services for your vehicle's heating and cooling systems.</p>
+        <a href="#" class="text-xs font-bold uppercase tracking-widest border-b-2 border-brand-accent pb-1 inline-block">Learn More</a>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="p-10 bg-white border-r border-b border-gray-200 hover:bg-gray-50 transition group" data-animation-on-scroll="">
+        <div class="w-12 h-12 mb-8 bg-gray-100 flex items-center justify-center text-gray-900 transition-colors group-hover:bg-brand-dark group-hover:text-white rounded-none">
+          <i data-lucide="clipboard-check" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4 uppercase font-primary">Preventive Maintenance</h3>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">Keep your car running longer with scheduled inspections and fluid top-offs.</p>
+        <a href="#" class="text-xs font-bold uppercase tracking-widest border-b-2 border-brand-accent pb-1 inline-block">Learn More</a>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="p-10 bg-white border-r border-b border-gray-200 hover:bg-gray-50 transition group" data-animation-on-scroll="">
+        <div class="w-12 h-12 mb-8 bg-gray-100 flex items-center justify-center text-gray-900 transition-colors group-hover:bg-brand-dark group-hover:text-white rounded-none">
+          <i data-lucide="droplet" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4 uppercase font-primary">Oil Changes</h3>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">Standard and synthetic oil services to keep your engine properly lubricated and cool.</p>
+        <a href="#" class="text-xs font-bold uppercase tracking-widest border-b-2 border-brand-accent pb-1 inline-block">Learn More</a>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="p-10 bg-white border-r border-b border-gray-200 hover:bg-gray-50 transition group" data-animation-on-scroll="">
+        <div class="w-12 h-12 mb-8 bg-gray-100 flex items-center justify-center text-gray-900 transition-colors group-hover:bg-brand-dark group-hover:text-white rounded-none">
+          <i data-lucide="gauge" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4 uppercase font-primary">Transmission Fluid Change</h3>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">Ensure smooth shifting and prevent costly damage with our transmission services.</p>
+        <a href="#" class="text-xs font-bold uppercase tracking-widest border-b-2 border-brand-accent pb-1 inline-block">Learn More</a>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="p-10 bg-white border-r border-b border-gray-200 hover:bg-gray-50 transition group" data-animation-on-scroll="">
+        <div class="w-12 h-12 mb-8 bg-gray-100 flex items-center justify-center text-gray-900 transition-colors group-hover:bg-brand-dark group-hover:text-white rounded-none">
+          <i data-lucide="settings-2" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4 uppercase font-primary">Brake Repair</h3>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">From brake pads to rotors and lines—safety is our absolute highest priority.</p>
+        <a href="#" class="text-xs font-bold uppercase tracking-widest border-b-2 border-brand-accent pb-1 inline-block">Learn More</a>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="p-10 bg-white border-r border-b border-gray-200 hover:bg-gray-50 transition group" data-animation-on-scroll="">
+        <div class="w-12 h-12 mb-8 bg-gray-100 flex items-center justify-center text-gray-900 transition-colors group-hover:bg-brand-dark group-hover:text-white rounded-none">
+          <i data-lucide="wrench" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4 uppercase font-primary">Belt and Hose Replacement</h3>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">Proactive replacement of worn belts and cracked hoses before they break.</p>
+        <a href="#" class="text-xs font-bold uppercase tracking-widest border-b-2 border-brand-accent pb-1 inline-block">Learn More</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 md:px-12">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div data-animation-on-scroll="" class="relative order-2 md:order-1">
+        <div class="aspect-square bg-gray-100 rounded-none overflow-hidden relative">
+          <img src="https://www.hometowntirepros.com/portals/94/Skins/master/img/auto-repair/02.jpg" alt="Our Mechanic" class="w-full h-full object-cover">
+          <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-brand-accent p-8 flex items-center justify-center text-center rounded-none shadow-xl">
+            <div>
+              <div class="text-3xl font-black text-brand-dark font-primary">15+</div>
+              <div class="text-[10px] font-bold text-brand-dark uppercase tracking-widest leading-none mt-1">Years of Local Service</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-8 order-1 md:order-2" data-animation-on-scroll="">
+        <p class="text-sm font-bold text-brand-accent uppercase tracking-[0.2em]">Our Story</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight font-primary uppercase tracking-tight">
+          Passion for a Better <br> <span class="text-gray-400">Repairs Experience</span>
+        </h2>
+        <div class="space-y-4 text-gray-600 leading-relaxed">
+          <p>Hometown Tire Pros &amp; Service Center has come a long way from its beginnings to be the top auto repair and service shop in Centennial, CO.</p>
+          <p>When we first started out, it was a passion for a better tire buying and auto repair experience, which drove us to develop our custom service model. We turned hard work and inspiration into to a booming tire and auto repair provider.</p>
+          <p>We now serve customers all over Centennial and are thrilled to be part of your family's trusted brands.</p>
+        </div>
+        <div class="flex items-center space-x-4 pt-4">
+          <div class="w-16 h-1 bg-brand-dark"></div>
+          <span class="text-sm font-bold uppercase tracking-widest text-brand-dark">The Hometown Difference</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Banner -->
+<section class="py-12 px-4 bg-white">
+  <div class="relative bg-brand-dark rounded-none overflow-hidden py-16 px-8 md:px-20 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8" data-animation-on-scroll="">
+    <div class="space-y-4 max-w-2xl text-center md:text-left">
+      <h2 class="text-3xl md:text-5xl font-bold text-white font-primary">Reliable Auto Repair <br> <span class="text-brand-accent">Exclusively</span> for You.</h2>
+      <p class="text-gray-400">Drive with confidence knowing you’re backed by the top mechanics in Centennial.</p>
+    </div>
+    <div class="shrink-0">
+      <button class="bg-brand-accent text-brand-dark px-10 py-5 rounded-none font-bold text-sm hover:bg-white transition uppercase tracking-widest shadow-xl">
+        Schedule Today
+      </button>
+    </div>
+    
+    <!-- Decorative Pattern -->
+    <div class="absolute top-0 right-0 w-64 h-full opacity-5 pointer-events-none">
+      <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+          <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"></path>
+        </pattern>
+        <rect width="100" height="100" fill="url(#grid)"></rect>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-24 bg-neutral-surface">
+  <div class="max-w-7xl mx-auto px-4 md:px-12">
+    <div class="text-center mb-16" data-animation-on-scroll="">
+      <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">Customer Proof</p>
+      <h2 class="text-4xl font-bold text-gray-900 font-primary uppercase tracking-tight">Trusted By Centennial Families</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Testimonial 1 -->
+      <div class="bg-white p-10 border border-gray-100 rounded-none shadow-sm flex flex-col justify-between" data-animation-on-scroll="">
+        <div>
+          <div class="flex text-brand-accent mb-6">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-gray-600 italic mb-8">"Honest, fair pricing and they always explain exactly what's going on with my car. I won't go anywhere else in Centennial."</p>
+        </div>
+        <div class="flex items-center space-x-4">
+          <div class="w-10 h-10 bg-gray-200 rounded-none"></div>
+          <div class="text-sm">
+            <div class="font-bold text-gray-900 uppercase">Sarah Jenkins</div>
+            <div class="text-gray-500">Local Resident</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-white p-10 border border-gray-100 rounded-none shadow-sm flex flex-col justify-between" data-animation-on-scroll="">
+        <div>
+          <div class="flex text-brand-accent mb-6">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-gray-600 italic mb-8">"Great selection of tires and fast service. They handled my brake repair in record time when I was in a bind."</p>
+        </div>
+        <div class="flex items-center space-x-4">
+          <div class="w-10 h-10 bg-gray-200 rounded-none"></div>
+          <div class="text-sm">
+            <div class="font-bold text-gray-900 uppercase">Mark Thompson</div>
+            <div class="text-gray-500">Fleet Client</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-white p-10 border border-gray-100 rounded-none shadow-sm flex flex-col justify-between" data-animation-on-scroll="">
+        <div>
+          <div class="flex text-brand-accent mb-6">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-gray-600 italic mb-8">"The only shop that truly listens and works around my schedule. Their mobile tire service is a game changer!"</p>
+        </div>
+        <div class="flex items-center space-x-4">
+          <div class="w-10 h-10 bg-gray-200 rounded-none"></div>
+          <div class="text-sm">
+            <div class="font-bold text-gray-900 uppercase">Diana Rojas</div>
+            <div class="text-gray-500">Regular Customer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact & Location -->
+<section id="location" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 md:px-12">
+    <div class="grid md:grid-cols-2 gap-16">
+      
+      <div class="space-y-12" data-animation-on-scroll="">
+        <div>
+          <h2 class="text-4xl font-bold text-gray-900 font-primary uppercase tracking-tight mb-8">Visit Our Shop</h2>
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-gray-100 flex items-center justify-center text-gray-900 shrink-0 rounded-none">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div class="ml-6">
+                <h4 class="font-bold text-lg uppercase font-primary">Address</h4>
+                <p class="text-gray-600">13900 E Briarwood Ave<br>Centennial, CO 80112</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-gray-100 flex items-center justify-center text-gray-900 shrink-0 rounded-none">
+                <i data-lucide="phone" class="w-6 h-6"></i>
+              </div>
+              <div class="ml-6">
+                <h4 class="font-bold text-lg uppercase font-primary">Phone &amp; Email</h4>
+                <p class="text-gray-600">(720) 328-0490</p>
+                <p class="text-gray-600">service@hometowntirepros.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-lg uppercase font-primary mb-6">Business Hours</h4>
+          <div class="space-y-2 text-gray-600 max-w-xs">
+            <div class="flex justify-between">
+              <span>Mon - Fri</span>
+              <span class="font-bold text-gray-900">7:30 AM - 5:30 PM</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Sat</span>
+              <span class="font-bold text-gray-900">8:00 AM - 1:00 PM</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Sun</span>
+              <span class="font-bold text-red-600">Closed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-animation-on-scroll="">
+        <div class="h-[500px] bg-gray-100 w-full relative rounded-none overflow-hidden group border border-gray-200 shadow-xl">
+          <!-- Placeholder for Actual Map -->
+          <div class="absolute inset-0 bg-gray-200">
+             <img src="https://images.pexels.com/photos/9535771/pexels-photo-9535771.jpeg?w=800&amp;h=1000&amp;fit=crop" alt="Map Location" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div class="relative">
+              <div class="w-10 h-10 bg-brand-dark rounded-none animate-ping opacity-25"></div>
+              <div class="absolute inset-0 w-10 h-10 bg-brand-dark rounded-none flex items-center justify-center text-white"><i data-lucide="map-pin"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section></main>
+
+  <footer class="bg-brand-dark text-white pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-4 md:px-12">
+      <div class="grid md:grid-cols-4 gap-12 mb-16">
+        <div class="space-y-4">
+          <div class="text-2xl font-bold font-primary">Hometown Tire Pros.</div>
+          <p class="text-gray-400 text-sm leading-relaxed">Top auto repair and service shop in Centennial, CO. Experience and commitment you can trust for your family's safety.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-white uppercase text-sm tracking-widest">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-gray-400" data-editable-list="footer.company">
+            <li><a href="#services" class="hover:text-white transition-colors">Auto Repair</a></li>
+            <li><a href="#tires" class="hover:text-white transition-colors">Shop Tires</a></li>
+            <li><a href="#about" class="hover:text-white transition-colors">Our Story</a></li>
+            <li><a href="#location" class="hover:text-white transition-colors">Find Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-white uppercase text-sm tracking-widest">Contact Information</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li class="flex items-start">
+              <i data-lucide="map-pin" class="w-4 h-4 mr-2 text-brand-accent shrink-0"></i>
+              <span>13900 E Briarwood Ave<br>Centennial, CO 80112</span>
+            </li>
+            <li class="flex items-center">
+              <i data-lucide="phone" class="w-4 h-4 mr-2 text-brand-accent"></i>
+              <span>(720) 328-0490</span>
+            </li>
+            <li class="flex items-center">
+              <i data-lucide="mail" class="w-4 h-4 mr-2 text-brand-accent"></i>
+              <span>service@hometowntirepros.com</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-white uppercase text-sm tracking-widest">Newsletter</h4>
+          <div class="flex bg-gray-800 p-1 rounded-none">
+            <input type="email" placeholder="Your email" class="bg-transparent px-4 py-2 text-sm w-full outline-none text-white placeholder-gray-500 border-none focus:ring-0">
+            <button class="bg-white text-black px-4 py-2 rounded-none text-sm font-bold hover:bg-gray-100 transition">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+        <p>© 2025 Hometown Tire Pros &amp; Service Center. All rights reserved.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="https://www.facebook.com/HometownTP/" class="hover:text-white transition-colors">Facebook</a>
+          <a href="https://www.instagram.com/hometowntires/" class="hover:text-white transition-colors">Instagram</a>
+          <a href="https://g.co/kgs/GkCV69Z" class="hover:text-white transition-colors">Google</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize Icons
+      lucide.createIcons();
+
+      // Scroll Reveal Animation Logic
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-on-scroll-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.05 });
+
+      document.querySelectorAll('[data-animation-on-scroll]').forEach(el => {
+        el.classList.add('animate-on-scroll-hidden');
+        observer.observe(el);
+      });
+
+      // Mobile Menu Logic
+      const menuToggle = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      let isMenuOpen = false;
+
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+           isMenuOpen = !isMenuOpen;
+           if (isMenuOpen) {
+             mobileMenu.classList.remove('hidden');
+             menuToggle.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
+           } else {
+             mobileMenu.classList.add('hidden');
+             menuToggle.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+           }
+           lucide.createIcons(); // Re-render icons after changing innerHTML
+        });
+      }
+    });
+  </script>
+
+  
+</body></html>

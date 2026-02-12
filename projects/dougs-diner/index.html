@@ -1,0 +1,549 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Doug's Diner - Local. Fresh. Scratch Kitchen.</title>
+  
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Oswald:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+  <style>
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .animate-on-scroll-hidden {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .animate-on-scroll-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+<link rel="stylesheet" href="styles.css">
+  <style>
+    #app-root .font-primary {
+      font-family: 'Oswald', sans-serif;
+    }
+    #app-root .font-secondary {
+      font-family: 'DM Sans', sans-serif;
+    }
+    #app-root .text-brand-primary {
+      --tw-text-opacity: 1;
+      color: rgb(223 74 137 / var(--tw-text-opacity, 1));
+    }
+    #app-root .hover\:text-brand-primary:hover {
+      --tw-text-opacity: 1;
+      color: rgb(223 74 137 / var(--tw-text-opacity, 1));
+    }
+    #app-root .text-text-primary {
+      --tw-text-opacity: 1;
+      color: rgb(26 26 26 / var(--tw-text-opacity, 1));
+    }
+    #app-root .text-text-secondary {
+      --tw-text-opacity: 1;
+      color: rgb(102 102 102 / var(--tw-text-opacity, 1));
+    }
+    #app-root .bg-brand-primary {
+      --tw-bg-opacity: 1;
+      background-color: rgb(223 74 137 / var(--tw-bg-opacity, 1));
+    }
+    #app-root .bg-brand-primary\/10 {
+      background-color: rgb(223 74 137 / 0.1);
+    }
+    #app-root .bg-brand-primary\/5 {
+      background-color: rgb(223 74 137 / 0.05);
+    }
+    #app-root .hover\:bg-brand-secondary:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 159 127 / var(--tw-bg-opacity, 1));
+    }
+    #app-root .border-brand-primary\/10 {
+      border-color: rgb(223 74 137 / 0.1);
+    }
+    #app-root .bg-neutral-background {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+    }
+    #app-root .bg-neutral-background\/90 {
+      background-color: rgb(255 255 255 / 0.9);
+    }
+    #app-root .bg-neutral-surface {
+      --tw-bg-opacity: 1;
+      background-color: rgb(194 225 251 / 0.35);
+    }
+    #app-root .bg-text-primary {
+      --tw-bg-opacity: 1;
+      background-color: rgb(34 34 34 / var(--tw-bg-opacity, 1));
+    }
+    #app-root .border-text-primary {
+      --tw-border-opacity: 1;
+      border-color: rgb(34 34 34 / var(--tw-border-opacity, 1));
+    }
+    #app-root .shadow-cta {
+      --tw-shadow: 0 4px 15px rgba(223, 74, 137, 0.3);
+      --tw-shadow-colored: 0 4px 15px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+  </style>
+</head>
+
+<body id="app-root" class="font-secondary bg-neutral-background text-text-secondary overflow-x-hidden flex flex-col min-h-screen">
+
+  <header class="fixed top-0 left-0 right-0 z-50 bg-neutral-background/90 backdrop-blur-md border-b border-gray-100/50">
+    <nav class="w-full px-6 py-4 flex items-center justify-between max-w-7xl mx-auto">
+      <div class="flex items-center gap-2">
+        <div class="text-brand-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"></path>
+          </svg>
+        </div>
+        <span class="text-xl font-bold tracking-tight uppercase text-text-primary font-primary">Doug's Diner</span>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-text-secondary">
+        <a href="/index.html" class="hover:text-brand-primary transition-colors">Portfolio</a>
+        <a href="#top" class="hover:text-brand-primary transition-colors">Home</a>
+        <a href="#about" class="hover:text-brand-primary transition-colors">About Us</a>
+        <a href="#philosophy" class="hover:text-brand-primary transition-colors">Philosophy</a>
+        <a href="#locations" class="hover:text-brand-primary transition-colors">Locations</a>
+        <a href="#work" class="hover:text-brand-primary transition-colors">Work With Us</a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#locations" class="bg-text-primary text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors shadow-lg shadow-gray-200">
+          Order Online
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-text-primary" aria-expanded="false" aria-controls="mobile-menu">
+        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-6">
+      <div class="flex flex-col gap-4 text-sm font-medium text-text-secondary">
+        <a href="/index.html" class="hover:text-brand-primary transition-colors">Portfolio</a>
+        <a href="#top" class="hover:text-brand-primary transition-colors">Home</a>
+        <a href="#about" class="hover:text-brand-primary transition-colors">About Us</a>
+        <a href="#philosophy" class="hover:text-brand-primary transition-colors">Philosophy</a>
+        <a href="#locations" class="hover:text-brand-primary transition-colors">Locations</a>
+        <a href="#work" class="hover:text-brand-primary transition-colors">Work With Us</a>
+      </div>
+      <a href="#locations" class="mt-5 inline-flex bg-text-primary text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors shadow-lg shadow-gray-200">
+        Order Online
+      </a>
+    </div>
+  </header>
+
+  <main id="top" class="flex-grow pt-20"><section class="px-6 py-12 md:py-24 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative overflow-visible">
+  <!-- Hero Text -->
+  <div data-animation-on-scroll="" class="space-y-6 relative z-10">
+    <div class="inline-block bg-brand-primary/10 text-brand-primary px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider mb-4">
+      Est. 2010 • Award Winning
+    </div>
+    <h1 class="text-5xl md:text-7xl font-primary font-bold leading-[1.1] text-text-primary">
+      Local. Fresh. <br>
+      <span class="relative inline-block text-brand-primary">
+        Scratch
+        <!-- Sketch Underline -->
+        <svg viewBox="0 0 200 20" class="absolute -bottom-2 left-0 w-full h-4 opacity-60" fill="none" stroke="#DF4A89" stroke-width="3" stroke-linecap="round">
+          <path d="M5 15 Q 100 5 195 15"></path>
+        </svg>
+      </span> Kitchen.
+    </h1>
+    <p class="text-text-secondary text-lg md:text-xl leading-relaxed max-w-md font-secondary">
+      We serve food, harmony, and laughter. Our homemade recipes are crafted with care using real butter and premium ingredients.
+    </p>
+    <div class="pt-8 flex flex-wrap gap-4 relative">
+        <!-- Dotted line decoration -->
+        <svg viewBox="0 0 100 20" class="hidden lg:block absolute -top-8 left-48 w-32 text-brand-primary opacity-40 transform -rotate-12" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4">
+          <path d="M0 10 Q 50 20 100 10"></path>
+        </svg>
+      <a href="#locations" class="bg-brand-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-brand-secondary transition-colors shadow-cta">
+        Order Online
+      </a>
+      <a href="#locations" class="bg-white border-2 border-text-primary text-text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-neutral-background transition-colors">
+        Find a Location
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero Images Grid (Styled from Trekpass Template) -->
+  <div data-animation-on-scroll="" class="relative h-[500px] md:h-[600px] w-full z-0 mt-12 lg:mt-0">
+    <!-- Decorative Fork/Knife Icon replacement for Plane -->
+    <div class="absolute top-0 right-10 text-brand-primary z-20 animate-pulse-slow">
+      <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 transform rotate-12" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"></path>
+      </svg>
+    </div>
+
+    <!-- Image 1: Main Appetizer/Dish -->
+    <div class="absolute top-0 left-6 md:left-1/4 w-52 h-72 md:w-64 md:h-80 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white z-10 transform -rotate-3 hover:rotate-0 transition-transform duration-500 hover:z-30">
+      <img src="https://www.dougsdiner.com/wp-content/uploads/2023/04/Dougs-Diner@4x.png" alt="Doug's Diner Branding" class="w-full h-full object-contain p-4 bg-neutral-surface">
+    </div>
+
+    <!-- Image 2: The Burger -->
+    <div class="absolute top-10 right-6 md:right-10 w-44 h-44 md:w-56 md:h-56 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white z-0 transform translate-x-4 hover:z-30 hover:scale-105 transition-all">
+      <img src="https://www.dougsdiner.com/wp-content/uploads/2022/11/Burger_Dark_1-min.jpg" alt="Delicious Doug's Burger" class="w-full h-full object-cover">
+    </div>
+
+     <!-- Image 3: Interior/Breakfast -->
+     <div class="absolute bottom-10 right-12 md:right-20 w-48 h-60 md:w-56 md:h-72 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white z-20 transform rotate-3 hover:rotate-0 transition-transform duration-500 hover:z-30">
+      <img src="https://www.dougsdiner.com/wp-content/uploads/2023/03/03I7065.jpg" alt="Doug's Diner Fresh Food" class="w-full h-full object-cover">
+    </div>
+  </div>
+</section>
+
+<!-- Scratch Kitchen Philosophy -->
+<section id="philosophy" class="px-6 py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div data-animation-on-scroll="" class="order-2 lg:order-1">
+        <div class="grid grid-cols-2 gap-4">
+          <img src="https://www.dougsdiner.com/wp-content/uploads/2023/03/Pancake_2.jpg" alt="Fresh Pancakes" class="rounded-3xl shadow-card hover:scale-105 transition-transform duration-500 mt-8">
+          <img src="https://www.dougsdiner.com/wp-content/uploads/2023/03/Burrito_1.jpg" alt="Hearty Burrito" class="rounded-3xl shadow-card hover:scale-105 transition-transform duration-500">
+        </div>
+      </div>
+      <div data-animation-on-scroll="" class="space-y-6 order-1 lg:order-2">
+        <h2 class="text-3xl md:text-5xl font-primary font-bold text-text-primary leading-tight">We Serve Food, Harmony &amp; Laughter</h2>
+        <p class="text-text-secondary text-lg leading-relaxed">
+          Our award-winning restaurant takes pride in crafting nearly all of our menu items from scratch using homemade recipes. From the sauces, soups, browns, and dressings to the meats, sausages, pickles, and biscuits, every dish is made with care and attention to detail.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+            <div class="flex items-center gap-3">
+                <div class="bg-brand-primary/10 p-2 rounded-full text-brand-primary">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="font-bold text-text-primary">Real Butter Only</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="bg-brand-primary/10 p-2 rounded-full text-brand-primary">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="font-bold text-text-primary">Premium Canola Oil</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="bg-brand-primary/10 p-2 rounded-full text-brand-primary">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="font-bold text-text-primary">Scratch-Made Biscuits</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="bg-brand-primary/10 p-2 rounded-full text-brand-primary">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="font-bold text-text-primary">Homemade Pickles</span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Us / Owners Profile -->
+<section id="about" class="px-6 py-20 bg-neutral-background">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16" data-animation-on-scroll="">
+        <h2 class="text-4xl md:text-6xl font-primary font-bold text-text-primary mb-4">Behind the Counter</h2>
+        <p class="text-text-secondary max-w-2xl mx-auto">With over 82 years of combined hospitality experience, our founders bring a passion for service that is unparalleled in the diner industry.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Owner 1 -->
+        <div data-animation-on-scroll="" class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col md:flex-row gap-8 items-center md:items-start group hover:shadow-card transition-shadow">
+            <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 rounded-[2rem] overflow-hidden bg-gray-100">
+                <img src="https://images.pexels.com/photos/34081651/pexels-photo-34081651.jpeg?w=400&amp;h=400&amp;fit=crop" alt="Founder 1" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-text-primary font-primary">The Visionary</h3>
+                        <p class="text-brand-primary font-bold text-sm uppercase">42 Years Experience</p>
+                    </div>
+                </div>
+                <p class="text-text-secondary text-sm leading-relaxed mb-4">
+                    A seasoned industry veteran with a background at McDonald's and Taco Bell. Dedicated to management and training excellence. Proudly served in the Colorado Air National Guard (1984-1988).
+                </p>
+                <div class="bg-brand-primary/5 px-4 py-2 rounded-xl text-[10px] font-bold uppercase text-brand-primary inline-block">Colorado Air National Guard Vet</div>
+            </div>
+        </div>
+
+        <!-- Owner 2 -->
+        <div data-animation-on-scroll="" class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col md:flex-row gap-8 items-center md:items-start group hover:shadow-card transition-shadow">
+            <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 rounded-[2rem] overflow-hidden bg-gray-100">
+                <img src="https://images.pexels.com/photos/25651531/pexels-photo-25651531.jpeg?w=400&amp;h=400&amp;fit=crop" alt="Founder 2" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-text-primary font-primary">The Strategist</h3>
+                        <p class="text-brand-primary font-bold text-sm uppercase">40 Years Experience</p>
+                    </div>
+                </div>
+                <p class="text-text-secondary text-sm leading-relaxed mb-4">
+                    A CU Boulder Business graduate fluent in Mayan, Spanish, and English. Grew up in Guatemala and Grand Junction, bringing 40 years of international hospitality insight to every recipe.
+                </p>
+                <div class="flex gap-2">
+                    <span class="bg-brand-primary/5 px-3 py-1 rounded-lg text-[10px] font-bold uppercase text-brand-primary">Trilingual</span>
+                    <span class="bg-brand-primary/5 px-3 py-1 rounded-lg text-[10px] font-bold uppercase text-brand-primary">CU Boulder Alumni</span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Signature Dishes Gallery -->
+<section class="px-6 py-16 max-w-7xl mx-auto overflow-hidden">
+    <div class="flex items-end justify-between mb-10">
+        <div>
+            <span class="text-brand-primary font-bold uppercase tracking-widest text-xs">Our Favorites</span>
+            <h2 class="text-3xl font-bold text-text-primary font-primary">Award-Winning Taste</h2>
+        </div>
+        <button class="hidden md:block border border-gray-300 px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors">See the full menu</button>
+    </div>
+    
+    <div class="flex gap-6 overflow-x-auto pb-8 scrollbar-hide no-scrollbar -mx-6 px-6">
+        <div class="min-w-[300px] group cursor-pointer">
+            <div class="h-[400px] rounded-[2.5rem] overflow-hidden mb-4 relative shadow-sm">
+                <img src="https://www.dougsdiner.com/wp-content/uploads/2023/04/Dougs-Diner@4x.png" alt="Doug's Logo" class="w-full h-full object-contain p-12 bg-white group-hover:scale-110 transition-transform duration-700">
+                <div class="absolute top-4 right-4 bg-brand-primary text-white text-[10px] font-bold px-3 py-1 rounded-full">EST. 2010</div>
+            </div>
+            <h3 class="font-bold text-text-primary">Classic Doug's Burger</h3>
+            <p class="text-sm text-text-secondary">Fresh never frozen beef</p>
+        </div>
+        <div class="min-w-[300px] group cursor-pointer">
+            <div class="h-[400px] rounded-[2.5rem] overflow-hidden mb-4 relative shadow-sm">
+                <img src="https://www.dougsdiner.com/wp-content/uploads/2022/11/Avo_Toast-min-scaled.jpg" alt="Avocado Toast" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            </div>
+            <h3 class="font-bold text-text-primary">Avocado Toast</h3>
+            <p class="text-sm text-text-secondary">Modern flare, scratch base</p>
+        </div>
+        <div class="min-w-[300px] group cursor-pointer">
+            <div class="h-[400px] rounded-[2.5rem] overflow-hidden mb-4 relative shadow-sm">
+                <img src="https://www.dougsdiner.com/wp-content/uploads/2023/03/Oml_2-scaled.jpg" alt="Gourmet Omelet" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            </div>
+            <h3 class="font-bold text-text-primary">House Omelets</h3>
+            <p class="text-sm text-text-secondary">Signature scratch-made blends</p>
+        </div>
+        <div class="min-w-[300px] group cursor-pointer">
+            <div class="h-[400px] rounded-[2.5rem] overflow-hidden mb-4 relative shadow-sm">
+                <img src="https://www.dougsdiner.com/wp-content/uploads/2023/03/03I7060-scaled.jpg" alt="Breakfast Platter" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            </div>
+            <h3 class="font-bold text-text-primary">Breakfast Platters</h3>
+            <p class="text-sm text-text-secondary">Fuel for your local day</p>
+        </div>
+    </div>
+</section>
+
+<!-- Locations Section -->
+<section id="locations" class="px-6 py-20 bg-text-primary text-white rounded-[4rem] mx-4 my-10 relative overflow-hidden">
+    <!-- Decorative element -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
+            <div data-animation-on-scroll="">
+                <h2 class="text-4xl md:text-6xl font-primary font-bold mb-4">Find a Doug's Near You</h2>
+                <p class="text-gray-400 max-w-xl">We're growing across Colorado! From Boulder to Thornton, there's always a warm welcome waiting for you.</p>
+            </div>
+            <div class="bg-brand-primary px-6 py-3 rounded-2xl" data-animation-on-scroll="">
+                <p class="text-[10px] font-bold uppercase tracking-widest text-white/80 mb-1">Boulder Special</p>
+                <p class="font-bold text-sm">Full Alcohol Menu Available</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Location Item 1 -->
+            <div data-animation-on-scroll="" class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:border-brand-primary/50 transition-colors">
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-brand-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                    Boulder
+                </h3>
+                <p class="text-gray-400 text-sm mb-4 italic">2574 Baseline Road, Boulder, CO 80303</p>
+                <a href="tel:7203798004" class="text-white hover:text-brand-primary font-bold text-sm block mb-6">(720) 379-8004</a>
+                <button class="w-full bg-white text-text-primary py-3 rounded-xl font-bold text-sm hover:bg-brand-primary hover:text-white transition-all">Order from this Store</button>
+            </div>
+            <!-- Location Item 2 -->
+            <div data-animation-on-scroll="" class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:border-brand-primary/50 transition-colors">
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-brand-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                    Parker
+                </h3>
+                <p class="text-gray-400 text-sm mb-4 italic">18595 E Mainstreet #140, Parker, CO 80134</p>
+                <a href="tel:7204767162" class="text-white hover:text-brand-primary font-bold text-sm block mb-6">(720) 476-7162</a>
+                <button class="w-full bg-white text-text-primary py-3 rounded-xl font-bold text-sm hover:bg-brand-primary hover:text-white transition-all">Order from this Store</button>
+            </div>
+            <!-- Location Item 3 -->
+            <div data-animation-on-scroll="" class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:border-brand-primary/50 transition-colors">
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-brand-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                    Ft Collins
+                </h3>
+                <p class="text-gray-400 text-sm mb-4 italic">2842 Council Tree Ave #143, Ft Collins, CO 80525</p>
+                <a href="tel:9706942829" class="text-white hover:text-brand-primary font-bold text-sm block mb-6">(970) 694-2829</a>
+                <button class="w-full bg-white text-text-primary py-3 rounded-xl font-bold text-sm hover:bg-brand-primary hover:text-white transition-all">Order from this Store</button>
+            </div>
+        </div>
+        
+        <div class="mt-12 text-center" data-animation-on-scroll="">
+            <p class="text-sm text-gray-400 mb-6">Also serving Centennial, Greeley, Castle Rock, Windsor, Loveland, Mead, and Thornton.</p>
+            <button class="border border-white/20 px-8 py-3 rounded-full hover:bg-white/10 transition-colors font-bold text-sm">View All 10 Locations</button>
+        </div>
+    </div>
+</section>
+
+<!-- Gift Card / CTA Section -->
+<section id="work" class="px-6 py-16 max-w-7xl mx-auto my-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Own a Doug's -->
+        <div data-animation-on-scroll="" class="bg-white rounded-[3rem] p-10 border border-gray-100 shadow-sm relative overflow-hidden group">
+            <div class="relative z-10">
+                <h3 class="text-3xl font-bold text-text-primary font-primary mb-4">Own a Doug's Diner</h3>
+                <p class="text-text-secondary mb-8">Have you ever thought about owning your own Doug's? We're looking for passionate licensees to join our award-winning family.</p>
+                <button class="bg-brand-primary text-white px-8 py-4 rounded-full font-bold shadow-cta hover:bg-brand-secondary transition-colors">Start the Questionnaire</button>
+            </div>
+            <div class="absolute -bottom-10 -right-10 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-700">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-64 h-64" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"></path>
+                </svg>
+            </div>
+        </div>
+        
+        <!-- Work at Doug's -->
+        <div data-animation-on-scroll="" class="bg-brand-primary/5 rounded-[3rem] p-10 border border-brand-primary/10 shadow-sm relative overflow-hidden group">
+            <div class="relative z-10">
+                <h3 class="text-3xl font-bold text-brand-primary font-primary mb-4">Work With Us</h3>
+                <p class="text-text-secondary mb-8">Join a team that values harmony, laughter, and hard work. We're always looking for fresh faces to join our scratch kitchen crew.</p>
+                <button class="bg-text-primary text-white px-8 py-4 rounded-full font-bold hover:bg-gray-800 transition-colors">Apply Today</button>
+            </div>
+             <div class="absolute -bottom-10 -right-10 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-700">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-64 h-64 text-brand-primary" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 11.5c0-.8-.7-1.5-1.5-1.5s-1.5.7-1.5 1.5.7 1.5 1.5 1.5 1.5-.7 1.5-1.5zm-3 7h3c.3 0 .5-.2.5-.5v-1.1c0-1.1-.9-2-2-2s-2 .9-2 2v1.1c0 .3.2.5.5.5z"></path>
+                    <path d="M22 13h-4v-2c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v2H2v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-8zM8 11h8v2H8v-2zm12 8H4v-4h16v4z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter / Closing Section -->
+<section id="gifts" class="relative h-[400px] w-full rounded-[4rem] mx-4 mb-20 overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="https://www.dougsdiner.com/wp-content/uploads/2023/03/03I7098.jpg" alt="Doug's Diner Atmosphere" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-text-primary/90 via-text-primary/40 to-transparent"></div>
+  </div>
+
+  <div class="absolute bottom-0 left-0 w-full p-6 md:p-20 flex flex-col items-center text-center">
+    <h2 class="text-2xl md:text-4xl font-bold text-white mb-4 max-w-2xl font-primary z-10 leading-tight">
+      Get a Taste of Doug's Diner <br> at Home
+    </h2>
+    <p class="text-gray-200 mb-8 max-w-lg z-10 text-sm">
+      Grab a gift card for your loved ones or shop our exclusive merchandise.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-4 z-10">
+      <a href="#gifts" class="bg-brand-primary text-white px-8 py-3 rounded-full font-bold hover:bg-brand-secondary transition-colors text-sm md:text-base">
+        Order Gift Cards
+      </a>
+      <a href="#gifts" class="bg-white text-text-primary px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors text-sm md:text-base">
+        Shop Merchandise
+      </a>
+    </div>
+  </div>
+</section></main>
+
+  <footer class="bg-neutral-background border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 pt-16 pb-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div class="col-span-2 md:col-span-1">
+          <div class="flex items-center gap-2 mb-6">
+            <div class="text-brand-primary">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"></path>
+              </svg>
+            </div>
+            <span class="font-bold tracking-tight uppercase text-text-primary text-sm">Doug's Diner</span>
+          </div>
+          <p class="text-xs text-text-secondary font-medium leading-relaxed">Local. Fresh. Scratch Kitchen. Original. Delicious. Providing our guests with the highest quality of homemade food since 2010.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-text-primary mb-4 text-sm">Quick Links</h4>
+          <ul class="space-y-3 text-xs text-text-secondary font-medium">
+            <li><a href="#about" class="hover:text-brand-primary">About Us</a></li>
+            <li><a href="#locations" class="hover:text-brand-primary">Locations &amp; Menus</a></li>
+            <li><a href="#work" class="hover:text-brand-primary">Work at Doug's</a></li>
+            <li><a href="#locations" class="hover:text-brand-primary">Order Online</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-text-primary mb-4 text-sm">Community</h4>
+          <ul class="space-y-3 text-xs text-text-secondary font-medium">
+            <li><a href="#gifts" class="hover:text-brand-primary">Gift Cards</a></li>
+            <li><a href="#gifts" class="hover:text-brand-primary">Merchandise</a></li>
+            <li><a href="#work" class="hover:text-brand-primary">Licensee Info</a></li>
+            <li><a href="#work" class="hover:text-brand-primary">Own a Doug's</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-text-primary mb-4 text-sm">Follow Us</h4>
+          <div class="flex gap-4 text-text-primary">
+            <a href="#" class="hover:text-brand-primary"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+            <a href="#" class="hover:text-brand-primary"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-[10px] text-text-secondary uppercase tracking-widest font-bold">© 2025 Doug's Diner. All rights reserved.</p>
+        <div class="flex gap-6 text-[10px] font-bold uppercase tracking-widest text-text-secondary">
+          <a href="#" class="hover:text-brand-primary">Privacy Policy</a>
+          <a href="#" class="hover:text-brand-primary">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-on-scroll-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.05 });
+
+      document.querySelectorAll('[data-animation-on-scroll]').forEach(el => {
+        el.classList.add('animate-on-scroll-hidden');
+        observer.observe(el);
+      });
+
+      const menuButton = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', () => {
+          const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+          menuButton.setAttribute('aria-expanded', String(!isOpen));
+          mobileMenu.classList.toggle('hidden', isOpen);
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            menuButton.setAttribute('aria-expanded', 'false');
+            mobileMenu.classList.add('hidden');
+          });
+        });
+      }
+    });
+  </script>
+
+</body></html>
