@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Services | Colorado Help at Home</title>
+  <meta name="description" content="Skilled in-home nursing services in Denver and Centennial, including RN oversight, medication management, and chronic care support.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    .hero-gradient { background: linear-gradient(180deg, #fff 30%, #fffbf3 70%, #fcefef 93%); }
+    .blur-gradient { background: linear-gradient(-78.65deg, #C2A0E1cc, #92A0E1cc 29.48%, #a8b5f0cc 54.25%, #d4c5f0cc 74.21%); filter: blur(100px); }
+    .mobile-menu-hidden { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+    .mobile-menu-visible { transform: translateY(0); opacity: 1; pointer-events: auto; }
+    .active-nav { background: #1f2937; color: #fff; }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-primary bg-neutral-background text-text-primary overflow-x-hidden">
+
+  <header class="fixed top-0 left-0 w-full z-50 py-3" style="background-color: rgba(247, 249, 252, 0.64); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0, 0, 0, 0.12);">
+    <nav class="max-w-7xl mx-auto px-6 flex items-center justify-between gap-4">
+      <a href="index.html" class="text-xl font-semibold text-text-primary flex items-center gap-2">
+        <span class="hidden sm:inline">Colorado Help at Home</span>
+        <span class="sm:hidden">CO Help at Home</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-2">
+        <a href="/index.html" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">Portfolio</a>
+        <a href="index.html" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">Home</a>
+        <a href="medical-services.html" class="px-4 py-2 text-sm font-medium rounded-md transition-colors active-nav" aria-current="page">Medical Services</a>
+        <a href="non-medical-care.html" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">Non-Medical Care</a>
+        <a href="about.html" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">About Us</a>
+        <a href="contact.html" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">Contact</a>
+      </div>
+
+      <a href="tel:+13038010186" class="hidden md:inline-flex items-center gap-2 px-6 py-3 bg-text-primary text-white font-medium text-sm rounded-sm hover:shadow-soft transition-all hover:-translate-y-0.5">
+        (303) 801-0186
+      </a>
+
+      <button class="md:hidden flex flex-col gap-1.5 w-6 h-6 justify-center" id="mobile-menu-btn">
+        <span class="block h-0.5 w-full bg-text-primary rounded-full"></span>
+        <span class="block h-0.5 w-full bg-text-primary rounded-full"></span>
+        <span class="block h-0.5 w-full bg-text-primary rounded-full"></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu-hidden md:hidden absolute top-full left-0 w-full bg-neutral-surface border-t border-border-light transition-all duration-300" id="mobile-menu">
+      <div class="flex flex-col px-6 py-4 gap-1">
+        <a href="/index.html" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">Portfolio</a>
+        <a href="index.html" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">Home</a>
+        <a href="medical-services.html" class="py-3 text-sm font-bold text-brand-primary border-b border-border-light">Medical Services</a>
+        <a href="non-medical-care.html" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">Non-Medical Care</a>
+        <a href="about.html" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">About Us</a>
+        <a href="contact.html" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">Contact</a>
+        <a href="tel:+13038010186" class="py-3 text-sm font-bold text-brand-primary">Call (303) 801-0186</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-gradient pt-40 pb-20 px-6 relative overflow-hidden">
+      <div class="absolute bottom-24 left-1/2 -translate-x-1/2 w-[1220px] h-[543px] blur-gradient rounded-full -rotate-12 z-0 opacity-40"></div>
+      <div class="max-w-6xl mx-auto relative z-10 text-center" data-animation-on-scroll="">
+        <div class="inline-block px-3 py-1.5 bg-brand-primary bg-opacity-20 rounded text-xs font-mono font-medium text-brand-primary uppercase tracking-wide mb-4">
+          Professional Healthcare
+        </div>
+        <h1 class="font-heading text-5xl md:text-6xl font-normal tracking-tighter leading-tight mb-6">
+          In-Home Nursing and Skilled Medical Care
+        </h1>
+        <p class="text-lg text-text-secondary max-w-3xl mx-auto mb-8">
+          Our licensed team provides comprehensive in-home support including assessments, clinical monitoring, medication review, and advanced nursing interventions.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="contact.html" class="w-full sm:w-auto px-8 py-4 bg-text-primary text-white font-medium text-sm rounded-sm hover:shadow-soft transition-all hover:-translate-y-0.5">Request Medical Care</a>
+          <a href="tel:+13038010186" class="w-full sm:w-auto px-8 py-4 bg-transparent border border-text-primary text-text-primary font-medium text-sm rounded-sm hover:bg-black hover:bg-opacity-5 transition-all">Call (303) 801-0186</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-neutral-background">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+          <div class="lg:w-1/2" data-animation-on-scroll="">
+            <h2 class="font-heading text-4xl md:text-5xl font-normal tracking-tighter leading-tight mb-6">
+              Skilled Nursing at Home
+            </h2>
+            <p class="text-text-secondary mb-8 leading-relaxed">
+              Every visit starts with a head-to-toe assessment and full vital signs review. Our clinical team coordinates closely with families and providers to keep care plans clear and consistent.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="flex items-center gap-3 p-4 bg-neutral-surface rounded-lg border-l-4 border-brand-primary"><span class="text-sm font-medium">Injection Administration</span></div>
+              <div class="flex items-center gap-3 p-4 bg-neutral-surface rounded-lg border-l-4 border-brand-primary"><span class="text-sm font-medium">Wound Care and Dressing</span></div>
+              <div class="flex items-center gap-3 p-4 bg-neutral-surface rounded-lg border-l-4 border-brand-primary"><span class="text-sm font-medium">Blood Sugar Monitoring</span></div>
+              <div class="flex items-center gap-3 p-4 bg-neutral-surface rounded-lg border-l-4 border-brand-primary"><span class="text-sm font-medium">G-Tube Feedings</span></div>
+              <div class="flex items-center gap-3 p-4 bg-neutral-surface rounded-lg border-l-4 border-brand-primary"><span class="text-sm font-medium">IV Therapy and PICC Lines</span></div>
+              <div class="flex items-center gap-3 p-4 bg-neutral-surface rounded-lg border-l-4 border-brand-primary"><span class="text-sm font-medium">Medication Reconciliation</span></div>
+            </div>
+          </div>
+          <div class="lg:w-1/2 relative" data-animation-on-scroll="">
+            <div class="rounded-2xl overflow-hidden shadow-medium">
+              <img src="https://www.coloradohelpathome.com/wp-content/uploads/2025/05/in-home-health-nurses-colorado-1.jpg" alt="Home Health Nurse in Colorado" class="w-full h-auto object-cover">
+            </div>
+            <div class="absolute -bottom-10 -left-10 bg-white p-6 rounded-xl shadow-xl max-w-xs hidden md:block border border-border-light">
+              <p class="text-sm italic font-medium text-text-primary">Care plans are documented, monitored, and adjusted as needs change.</p>
+              <div class="mt-4 flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-brand-secondary"></div>
+                <span class="text-xs font-bold uppercase tracking-wider">RN and LPN Team</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-neutral-surface border-y border-border-light">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-10" data-animation-on-scroll="">
+          <h2 class="font-heading text-3xl md:text-4xl font-normal tracking-tighter leading-tight">Medical Service FAQs</h2>
+        </div>
+
+        <div class="space-y-4" data-animation-on-scroll="">
+          <div class="border border-border-light rounded-xl overflow-hidden bg-white">
+            <button class="w-full flex justify-between items-center p-6 text-left hover:bg-neutral-surface transition-colors" data-faq-toggle>
+              <span class="font-bold text-text-primary">Do you offer nurse-led medication management?</span>
+              <span class="text-xl">⌄</span>
+            </button>
+            <div class="p-6 pt-0 border-t border-border-light text-text-secondary text-sm leading-relaxed">
+              Yes. Our licensed nurses can review medications, monitor side effects, and coordinate with physicians and pharmacies.
+            </div>
+          </div>
+
+          <div class="border border-border-light rounded-xl overflow-hidden bg-white">
+            <button class="w-full flex justify-between items-center p-6 text-left hover:bg-neutral-surface transition-colors" data-faq-toggle>
+              <span class="font-bold text-text-primary">Can care plans be adjusted as conditions change?</span>
+              <span class="text-xl">⌄</span>
+            </button>
+            <div class="hidden p-6 pt-0 border-t border-border-light text-text-secondary text-sm leading-relaxed">
+              Absolutely. We continuously evaluate needs and update care plans to maintain safety, comfort, and clinical consistency.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-neutral-background">
+      <div class="max-w-5xl mx-auto px-6" data-animation-on-scroll="">
+        <div class="bg-text-primary text-white rounded-2xl p-10 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div>
+            <h3 class="font-heading text-3xl font-normal leading-tight mb-2">Need Skilled Nursing at Home?</h3>
+            <p class="text-sm opacity-80">We can help you build a care schedule that fits your family.</p>
+          </div>
+          <a href="contact.html" class="px-8 py-3 bg-white text-text-primary font-bold text-sm rounded-sm hover:shadow-soft transition-all">Talk to Our Team</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="hero-gradient pt-16 pb-8 border-t border-border-light">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-text-secondary">
+        <p>© 2026 Colorado Help at Home - All Rights Reserved.</p>
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="index.html" class="hover:text-text-primary transition-colors">Home</a>
+          <a href="medical-services.html" class="hover:text-text-primary transition-colors">Medical</a>
+          <a href="non-medical-care.html" class="hover:text-text-primary transition-colors">Non-Medical</a>
+          <a href="about.html" class="hover:text-text-primary transition-colors">About</a>
+          <a href="contact.html" class="hover:text-text-primary transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.onclick = () => mobileMenu.classList.toggle('mobile-menu-hidden');
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('animate-on-scroll-visible');
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('[data-animation-on-scroll]').forEach(el => {
+        el.classList.add('animate-on-scroll-hidden');
+        observer.observe(el);
+      });
+
+      document.querySelectorAll('[data-faq-toggle]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const panel = btn.nextElementSibling;
+          const icon = btn.querySelector('span:last-child');
+          if (!panel) return;
+          panel.classList.toggle('hidden');
+          if (icon) icon.textContent = panel.classList.contains('hidden') ? '⌄' : '⌃';
+        });
+      });
+    });
+  </script>
+
+</body></html>

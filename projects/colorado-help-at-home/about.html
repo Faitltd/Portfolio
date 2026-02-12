@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Colorado Help at Home</title>
+  <meta name="description" content="Learn about Colorado Help at Home, our mission, and how our licensed team supports seniors and families across Denver and Centennial.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    .hero-gradient { background: linear-gradient(180deg, #fff 30%, #fffbf3 70%, #fcefef 93%); }
+    .mobile-menu-hidden { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+    .mobile-menu-visible { transform: translateY(0); opacity: 1; pointer-events: auto; }
+    .active-nav { background: #1f2937; color: #fff; }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-primary bg-neutral-background text-text-primary overflow-x-hidden">
+
+  <header class="fixed top-0 left-0 w-full z-50 py-3" style="background-color: rgba(247, 249, 252, 0.64); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0, 0, 0, 0.12);">
+    <nav class="max-w-7xl mx-auto px-6 flex items-center justify-between gap-4">
+      <a href="index.html" class="text-xl font-semibold text-text-primary flex items-center gap-2">
+        <span class="hidden sm:inline">Colorado Help at Home</span>
+        <span class="sm:hidden">CO Help at Home</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-2">
+        <a href="/index.html" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">Portfolio</a>
+        <a href="index.html" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">Home</a>
+        <a href="medical-services.html" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">Medical Services</a>
+        <a href="non-medical-care.html" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">Non-Medical Care</a>
+        <a href="about.html" class="px-4 py-2 text-sm font-medium rounded-md transition-colors active-nav" aria-current="page">About Us</a>
+        <a href="contact.html" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">Contact</a>
+      </div>
+
+      <a href="tel:+13038010186" class="hidden md:inline-flex items-center gap-2 px-6 py-3 bg-text-primary text-white font-medium text-sm rounded-sm hover:shadow-soft transition-all hover:-translate-y-0.5">
+        (303) 801-0186
+      </a>
+
+      <button class="md:hidden flex flex-col gap-1.5 w-6 h-6 justify-center" id="mobile-menu-btn">
+        <span class="block h-0.5 w-full bg-text-primary rounded-full"></span>
+        <span class="block h-0.5 w-full bg-text-primary rounded-full"></span>
+        <span class="block h-0.5 w-full bg-text-primary rounded-full"></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu-hidden md:hidden absolute top-full left-0 w-full bg-neutral-surface border-t border-border-light transition-all duration-300" id="mobile-menu">
+      <div class="flex flex-col px-6 py-4 gap-1">
+        <a href="/index.html" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">Portfolio</a>
+        <a href="index.html" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">Home</a>
+        <a href="medical-services.html" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">Medical Services</a>
+        <a href="non-medical-care.html" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">Non-Medical Care</a>
+        <a href="about.html" class="py-3 text-sm font-bold text-brand-primary border-b border-border-light">About Us</a>
+        <a href="contact.html" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">Contact</a>
+        <a href="tel:+13038010186" class="py-3 text-sm font-bold text-brand-primary">Call (303) 801-0186</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-gradient pt-40 pb-20 px-6">
+      <div class="max-w-6xl mx-auto text-center" data-animation-on-scroll="">
+        <div class="inline-block px-3 py-1.5 bg-brand-accent bg-opacity-20 rounded text-xs font-mono font-medium text-brand-primary uppercase tracking-wide mb-4">
+          Our Mission
+        </div>
+        <h1 class="font-heading text-5xl md:text-6xl font-normal tracking-tighter leading-tight mb-6">
+          Caring Is Our Way of Life
+        </h1>
+        <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+          We help seniors and families navigate care with respect, reliability, and personalized support built around real daily needs.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-24 bg-neutral-dark text-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1" data-animation-on-scroll="">
+            <img src="https://www.coloradohelpathome.com/wp-content/uploads/2025/05/Gemini_Generated_Image_l9ct7rl9ct7rl9ct-1024x1024.png" alt="Caring is our way of life" class="rounded-2xl shadow-glow opacity-80">
+          </div>
+          <div class="order-1 lg:order-2" data-animation-on-scroll="">
+            <h2 class="font-heading text-4xl md:text-5xl font-normal tracking-tighter leading-tight mb-8">
+              Built Around <span class="text-brand-primary italic">Independence and Dignity</span>
+            </h2>
+            <p class="text-lg opacity-80 mb-6 font-light leading-relaxed">
+              At Colorado Help at Home, we understand the importance of aging gracefully and with dignity. Our caregivers and nurses provide essential support that helps clients remain healthy and independent.
+            </p>
+            <p class="opacity-70 mb-10 leading-relaxed">
+              Our team assists each client to achieve the highest possible level of independence while prioritizing medical safety, communication, and consistent care quality.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-center gap-4"><div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center font-bold text-brand-primary">01</div><span class="font-medium">Specially Tailored In-Home Care</span></div>
+              <div class="flex items-center gap-4"><div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center font-bold text-brand-primary">02</div><span class="font-medium">Licensed and Insured Professionals</span></div>
+              <div class="flex items-center gap-4"><div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center font-bold text-brand-primary">03</div><span class="font-medium">Affordable At-Home Solutions</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-neutral-background border-y border-border-light">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="flex items-center gap-4" data-animation-on-scroll="">
+            <div class="w-10 h-10 bg-brand-primary/10 rounded-full flex items-center justify-center font-bold text-brand-primary">01</div>
+            <div><h4 class="font-heading font-bold text-text-primary">Licensed and Insured</h4><p class="text-xs text-text-secondary">Full compliance and standards</p></div>
+          </div>
+          <div class="flex items-center gap-4" data-animation-on-scroll="">
+            <div class="w-10 h-10 bg-brand-primary/10 rounded-full flex items-center justify-center font-bold text-brand-primary">02</div>
+            <div><h4 class="font-heading font-bold text-text-primary">Medical Staff</h4><p class="text-xs text-text-secondary">RNs, LPNs and CNAs</p></div>
+          </div>
+          <div class="flex items-center gap-4" data-animation-on-scroll="">
+            <div class="w-10 h-10 bg-brand-primary/10 rounded-full flex items-center justify-center font-bold text-brand-primary">03</div>
+            <div><h4 class="font-heading font-bold text-text-primary">Private Care</h4><p class="text-xs text-text-secondary">Personalized support plans</p></div>
+          </div>
+          <div class="flex items-center gap-4" data-animation-on-scroll="">
+            <div class="w-10 h-10 bg-brand-primary/10 rounded-full flex items-center justify-center font-bold text-brand-primary">04</div>
+            <div><h4 class="font-heading font-bold text-text-primary">Local Team</h4><p class="text-xs text-text-secondary">Denver and surrounding areas</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-neutral-surface">
+      <div class="max-w-5xl mx-auto px-6" data-animation-on-scroll="">
+        <div class="bg-white rounded-2xl border border-border-light p-10 md:p-12">
+          <h3 class="font-heading text-3xl md:text-4xl font-normal tracking-tighter leading-tight mb-5">How We Work With Families</h3>
+          <div class="space-y-4 text-text-secondary leading-relaxed">
+            <p><strong class="text-text-primary">1. Consultation:</strong> We start with a clear conversation about care needs, medical concerns, and daily support goals.</p>
+            <p><strong class="text-text-primary">2. Care Plan:</strong> Our team designs a practical plan with the right mix of nursing and caregiving services.</p>
+            <p><strong class="text-text-primary">3. Ongoing Support:</strong> We monitor progress, communicate updates, and refine care as needs change.</p>
+          </div>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="contact.html" class="px-8 py-3 bg-text-primary text-white font-bold text-sm rounded-sm hover:shadow-soft transition-all">Talk to Our Team</a>
+            <a href="medical-services.html" class="px-8 py-3 border border-text-primary text-text-primary font-bold text-sm rounded-sm hover:bg-black hover:bg-opacity-5 transition-all">View Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="hero-gradient pt-16 pb-8 border-t border-border-light">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-text-secondary">
+        <p>© 2026 Colorado Help at Home - All Rights Reserved.</p>
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="index.html" class="hover:text-text-primary transition-colors">Home</a>
+          <a href="medical-services.html" class="hover:text-text-primary transition-colors">Medical</a>
+          <a href="non-medical-care.html" class="hover:text-text-primary transition-colors">Non-Medical</a>
+          <a href="about.html" class="hover:text-text-primary transition-colors">About</a>
+          <a href="contact.html" class="hover:text-text-primary transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.onclick = () => mobileMenu.classList.toggle('mobile-menu-hidden');
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('animate-on-scroll-visible');
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('[data-animation-on-scroll]').forEach(el => {
+        el.classList.add('animate-on-scroll-hidden');
+        observer.observe(el);
+      });
+    });
+  </script>
+
+</body></html>

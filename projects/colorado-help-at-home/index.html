@@ -32,22 +32,29 @@
       opacity: 1;
       pointer-events: auto;
     }
+    .active-nav {
+      background: #1f2937;
+      color: #fff;
+    }
   </style>
 <link rel="stylesheet" href="styles.css"></head>
 
 <body class="font-primary bg-neutral-background text-text-primary overflow-x-hidden">
   
   <header class="fixed top-0 left-0 w-full z-50 py-3" style="background-color: rgba(247, 249, 252, 0.64); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0, 0, 0, 0.12);">
-    <nav class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-      <a href="/index.html" class="text-xl font-semibold text-text-primary flex items-center gap-2">
+    <nav class="max-w-7xl mx-auto px-6 flex items-center justify-between gap-4">
+      <a href="index.html" class="text-xl font-semibold text-text-primary flex items-center gap-2">
         <span class="hidden sm:inline">Colorado Help at Home</span>
         <span class="sm:hidden">CO Help at Home</span>
       </a>
       
       <div class="hidden md:flex items-center gap-2">
-        <a href="#medical" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">Medical Services</a>
-        <a href="#non-medical" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">Non-Medical Care</a>
-        <a href="#about" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">About Us</a>
+        <a href="/index.html" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">Portfolio</a>
+        <a href="index.html" class="px-4 py-2 text-sm font-medium rounded-md transition-colors active-nav" aria-current="page">Home</a>
+        <a href="medical-services.html" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">Medical Services</a>
+        <a href="non-medical-care.html" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">Non-Medical Care</a>
+        <a href="about.html" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">About Us</a>
+        <a href="contact.html" class="px-4 py-2 text-sm font-medium text-text-primary rounded-md hover:bg-black hover:bg-opacity-5 transition-colors">Contact</a>
       </div>
       
       <a href="tel:+13038010186" class="hidden md:inline-flex items-center gap-2 px-6 py-3 bg-text-primary text-white font-medium text-sm rounded-sm hover:shadow-soft transition-all hover:-translate-y-0.5">
@@ -63,9 +70,12 @@
     
     <div class="mobile-menu-hidden md:hidden absolute top-full left-0 w-full bg-neutral-surface border-t border-border-light transition-all duration-300" id="mobile-menu">
       <div class="flex flex-col px-6 py-4 gap-1">
-        <a href="#medical" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">Medical Services</a>
-        <a href="#non-medical" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">Non-Medical Care</a>
-        <a href="#about" class="py-3 text-sm font-medium text-text-primary">About Us</a>
+        <a href="/index.html" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">Portfolio</a>
+        <a href="index.html" class="py-3 text-sm font-bold text-brand-primary border-b border-border-light">Home</a>
+        <a href="medical-services.html" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">Medical Services</a>
+        <a href="non-medical-care.html" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">Non-Medical Care</a>
+        <a href="about.html" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">About Us</a>
+        <a href="contact.html" class="py-3 text-sm font-medium text-text-primary border-b border-border-light">Contact</a>
         <a href="tel:+13038010186" class="py-3 text-sm font-bold text-brand-primary">Call (303) 801-0186</a>
       </div>
     </div>
@@ -476,8 +486,17 @@
 </main>
 
   <footer class="hero-gradient pt-16 pb-8 border-t border-border-light">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <p class="text-sm text-text-primary font-light">© 2026 Colorado Help at Home - All Rights Reserved.</p>
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-text-secondary">
+        <p>© 2026 Colorado Help at Home - All Rights Reserved.</p>
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="index.html" class="hover:text-text-primary transition-colors">Home</a>
+          <a href="medical-services.html" class="hover:text-text-primary transition-colors">Medical</a>
+          <a href="non-medical-care.html" class="hover:text-text-primary transition-colors">Non-Medical</a>
+          <a href="about.html" class="hover:text-text-primary transition-colors">About</a>
+          <a href="contact.html" class="hover:text-text-primary transition-colors">Contact</a>
+        </div>
+      </div>
     </div>
   </footer>
 
